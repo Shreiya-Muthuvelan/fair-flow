@@ -1,0 +1,39 @@
+{
+  "model_version": "1.0",
+  "model_file": "artifacts/model.pkl",
+  "training_date": "2026-04-28",
+  "decision_threshold": 0.35,
+  "hyperparameters": {
+    "n_estimators": 300,
+    "max_depth": 5,
+    "learning_rate": 0.05,
+    "scale_pos_weight": 2.33
+  },
+  "performance_metrics": {
+    "auc_roc": 0.6535,
+    "accuracy": 0.7267,
+    "bad_precision": 0.75,
+    "bad_recall": 0.1333,
+    "good_recall": 0.981,
+    "demographic_parity_by_sex": 0.0241,
+    "disparate_impact_by_sex": 0.9749
+  },
+  "training_samples": 700,
+  "validation_samples": 150,
+  "test_samples": 150,
+  "features": [
+    "Age",
+    "Credit amount",
+    "Duration",
+    "Debt_ratio",
+    "Job",
+    "Housing",
+    "Saving accounts",
+    "Checking account",
+    "Purpose"
+  ],
+  "sensitive_attributes": [
+    "Sex",
+    "Age_group"
+  ]
+}

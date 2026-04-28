@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-04-28T11:18:30.700620",
+  "split": "val",
+  "threshold": 0.35,
+  "by_sex": {
+    "approval_rates": {
+      "female": 0.9622641509433962,
+      "male": 0.9381443298969072
+    },
+    "demographic_parity_difference": 0.0241,
+    "disparate_impact_ratio": 0.9749,
+    "demographic_parity_violation": false,
+    "disparate_impact_violation": false,
+    "equal_opportunity_difference": 0.0133,
+    "equal_opportunity_violation": false
+  },
+  "by_age_group": {
+    "approval_rates": {
+      "18-25": 0.9210526315789473,
+      "26-35": 0.9772727272727273,
+      "36-45": 0.95,
+      "46+": 0.9285714285714286
+    },
+    "demographic_parity_difference": 0.0562,
+    "disparate_impact_ratio": 0.9425,
+    "demographic_parity_violation": false,
+    "disparate_impact_violation": false
+  }
+}

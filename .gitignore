@@ -1,0 +1,21 @@
+# Raw data 
+data/raw/
+
+# Large artifact files
+artifacts/splits/*.parquet
+artifacts/model.pkl
+artifacts/preprocessor.pkl
+
+requirements.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db

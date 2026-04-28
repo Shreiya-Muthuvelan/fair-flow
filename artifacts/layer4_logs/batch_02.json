@@ -1,0 +1,305 @@
+{
+  "batch_id": "batch_02",
+  "timestamp": "2026-04-28T14:33:28.212601",
+  "n_samples": 50,
+  "data_drift": {
+    "numerical_features": {
+      "Age": {
+        "feature": "Age",
+        "ks_statistic": 0.0886,
+        "p_value": 0.8308,
+        "drift_detected": "False",
+        "severity": "INFO"
+      },
+      "Credit amount": {
+        "feature": "Credit amount",
+        "ks_statistic": 0.1,
+        "p_value": 0.707,
+        "drift_detected": "False",
+        "severity": "INFO"
+      },
+      "Duration": {
+        "feature": "Duration",
+        "ks_statistic": 0.1057,
+        "p_value": 0.6411,
+        "drift_detected": "False",
+        "severity": "INFO"
+      },
+      "Debt_ratio": {
+        "feature": "Debt_ratio",
+        "ks_statistic": 0.1586,
+        "p_value": 0.1743,
+        "drift_detected": "False",
+        "severity": "INFO"
+      }
+    },
+    "categorical_features": {
+      "Job": {
+        "feature": "Job",
+        "chi2_statistic": 2.6861,
+        "p_value": 0.4426,
+        "drift_detected": "False",
+        "severity": "INFO",
+        "category_counts": {
+          "0": 0,
+          "1": 13,
+          "2": 29,
+          "3": 8
+        }
+      },
+      "Housing": {
+        "feature": "Housing",
+        "chi2_statistic": 4.8627,
+        "p_value": 0.0879,
+        "drift_detected": "False",
+        "severity": "INFO",
+        "category_counts": {
+          "0": 8,
+          "1": 29,
+          "2": 13
+        }
+      },
+      "Saving accounts": {
+        "feature": "Saving accounts",
+        "chi2_statistic": 3.4495,
+        "p_value": 0.3274,
+        "drift_detected": "False",
+        "severity": "INFO",
+        "category_counts": {
+          "0": 33,
+          "1": 2,
+          "2": 8,
+          "3": 7
+        }
+      },
+      "Checking account": {
+        "feature": "Checking account",
+        "chi2_statistic": 3.971,
+        "p_value": 0.2646,
+        "drift_detected": "False",
+        "severity": "INFO",
+        "category_counts": {
+          "0": 13,
+          "1": 18,
+          "2": 18,
+          "3": 1
+        }
+      },
+      "Purpose": {
+        "feature": "Purpose",
+        "chi2_statistic": 2.2418,
+        "p_value": 0.9453,
+        "drift_detected": "False",
+        "severity": "INFO",
+        "category_counts": {
+          "0": 5,
+          "1": 20,
+          "2": 0,
+          "3": 3,
+          "4": 9,
+          "5": 12,
+          "6": 1,
+          "7": 0
+        }
+      }
+    },
+    "kl_divergences": {
+      "Age": {
+        "feature": "Age",
+        "kl_divergence": 1.1092,
+        "drift_detected": true,
+        "severity": "CRITICAL"
+      },
+      "Credit amount": {
+        "feature": "Credit amount",
+        "kl_divergence": 1.0865,
+        "drift_detected": true,
+        "severity": "CRITICAL"
+      },
+      "Duration": {
+        "feature": "Duration",
+        "kl_divergence": 1.9597,
+        "drift_detected": true,
+        "severity": "CRITICAL"
+      },
+      "Debt_ratio": {
+        "feature": "Debt_ratio",
+        "kl_divergence": 0.7049,
+        "drift_detected": true,
+        "severity": "CRITICAL"
+      },
+      "Job": {
+        "feature": "Job",
+        "kl_divergence": 0.4379,
+        "drift_detected": true,
+        "severity": "CRITICAL"
+      },
+      "Housing": {
+        "feature": "Housing",
+        "kl_divergence": 0.0422,
+        "drift_detected": false,
+        "severity": "INFO"
+      },
+      "Saving accounts": {
+        "feature": "Saving accounts",
+        "kl_divergence": 0.0524,
+        "drift_detected": false,
+        "severity": "INFO"
+      },
+      "Checking account": {
+        "feature": "Checking account",
+        "kl_divergence": 0.052,
+        "drift_detected": false,
+        "severity": "INFO"
+      },
+      "Purpose": {
+        "feature": "Purpose",
+        "kl_divergence": 0.4204,
+        "drift_detected": true,
+        "severity": "CRITICAL"
+      }
+    },
+    "overall_drift_detected": false
+  },
+  "prediction_drift": {
+    "approval_rate": {
+      "current": 0.92,
+      "baseline": 0.7,
+      "delta": 0.22,
+      "drift_detected": true
+    },
+    "confidence_distribution": {
+      "current_mean": 0.8167,
+      "current_std": 0.2228,
+      "ks_statistic": 0.0,
+      "ks_p_value": 1.0,
+      "drift_detected": false
+    }
+  },
+  "fairness_violations": {
+    "demographic_parity": {
+      "by_attribute": {
+        "Sex": {
+          "approval_rates": {
+            "male": 0.9355
+          },
+          "group_sizes": {
+            "female": 19,
+            "male": 31
+          },
+          "skipped_groups": [
+            "female"
+          ],
+          "demographic_parity_difference": null,
+          "violation": false,
+          "severity": "INFO",
+          "note": "Insufficient data \u2014 groups ['female'] had < 20 samples"
+        },
+        "Age_group": {
+          "approval_rates": {},
+          "group_sizes": {
+            "18-25": 11,
+            "26-35": 16,
+            "36-45": 16,
+            "46+": 7
+          },
+          "skipped_groups": [
+            "18-25",
+            "26-35",
+            "36-45",
+            "46+"
+          ],
+          "demographic_parity_difference": null,
+          "violation": false,
+          "severity": "INFO",
+          "note": "Insufficient data \u2014 groups ['18-25', '26-35', '36-45', '46+'] had < 20 samples"
+        }
+      },
+      "overall_violation": false
+    },
+    "disparate_impact": {
+      "by_attribute": {
+        "Sex": {
+          "group_rates": {
+            "male": 0.9355
+          },
+          "group_sizes": {
+            "female": 19,
+            "male": 31
+          },
+          "skipped_groups": [
+            "female"
+          ],
+          "min_group": null,
+          "max_group": null,
+          "disparate_impact_ratio": null,
+          "violation": false,
+          "severity": "INFO",
+          "note": "Insufficient data \u2014 groups ['female'] had < 20 samples"
+        },
+        "Age_group": {
+          "group_rates": {},
+          "group_sizes": {
+            "18-25": 11,
+            "26-35": 16,
+            "36-45": 16,
+            "46+": 7
+          },
+          "skipped_groups": [
+            "18-25",
+            "26-35",
+            "36-45",
+            "46+"
+          ],
+          "min_group": null,
+          "max_group": null,
+          "disparate_impact_ratio": null,
+          "violation": false,
+          "severity": "INFO",
+          "note": "Insufficient data \u2014 groups ['18-25', '26-35', '36-45', '46+'] had < 20 samples"
+        }
+      },
+      "overall_violation": false
+    },
+    "equal_opportunity": {
+      "by_attribute": {
+        "Sex": {
+          "tpr_by_group": {
+            "female": 0.9167,
+            "male": 0.9565
+          },
+          "equal_opportunity_difference": 0.0398,
+          "violation": false,
+          "severity": "INFO"
+        },
+        "Age_group": {
+          "tpr_by_group": {
+            "18-25": 0.8333,
+            "26-35": 1.0,
+            "36-45": 0.9091,
+            "46+": 1.0
+          },
+          "equal_opportunity_difference": 0.1667,
+          "violation": true,
+          "severity": "CRITICAL"
+        }
+      },
+      "overall_violation": true
+    },
+    "overall_violation": true
+  },
+  "alerts": [
+    {
+      "type": "PREDICTION_DRIFT",
+      "severity": "WARNING",
+      "feature": "approval_rate",
+      "message": "Approval rate shifted by 0.22"
+    },
+    {
+      "type": "FAIRNESS_VIOLATION",
+      "severity": "CRITICAL",
+      "feature": "equal_opportunity",
+      "message": "Fairness violation detected in equal_opportunity"
+    }
+  ]
+}
